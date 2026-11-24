@@ -1,0 +1,37 @@
+app:
+  storage_dir: "storage"
+  temp_dir: "storage/temp"
+  output_dir: "storage/output"
+  db_path: "storage/reels.db"
+
+video:
+  min_clip_len: 20       # Minimum clip duration in seconds
+  max_clip_len: 40       # Maximum clip duration in seconds
+  top_clips_per_vod: 3   # How many clips to extract per video
+  bucket_size: 10        # Seconds per analysis window
+  resolution: [1080, 1920]
+  fps: 30
+
+scoring:
+  heatmap_weight: 0.50
+  chat_weight: 0.30
+  audio_peak_weight: 0.20
+
+whisper:
+  model_size: "base.en"  # base.en is fast and lightweight on CPU
+  device: "cpu"
+  compute_type: "int8"   # 8-bit quantization for laptop CPU efficiency
+
+gemini:
+  model: "gemini-2.5-flash"
+  api_key_env: "GEMINI_API_KEY"
+
+telegram:
+  bot_token_env: "TELEGRAM_BOT_TOKEN"
+  chat_id_env: "TELEGRAM_CHAT_ID"
+
+youtube:
+  client_secrets_file: "storage/client_secret.json"
+  token_file: "storage/token.pickle"
+  default_privacy: "private"  # 'private' prevents policy rejections on unverified projects
+  max_daily_uploads: 5        # Hard safety ceiling below 10,000 units quota (1,600/upload)

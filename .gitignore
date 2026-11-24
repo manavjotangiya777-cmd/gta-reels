@@ -1,0 +1,41 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Local storage and media
+storage/temp/*
+storage/output/*
+!storage/temp/.gitkeep
+!storage/output/.gitkeep
+*.mp4
+*.mkv
+*.wav
+*.mp3
+*.ass
+*.srt
+*.vtt
+
+# SQLite Database
+storage/reels.db
+*.db
+*.sqlite3
+
+# Secrets and OAuth credentials
+storage/client_secret.json
+storage/token.pickle
+client_secret.json
+token.pickle
+.env
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

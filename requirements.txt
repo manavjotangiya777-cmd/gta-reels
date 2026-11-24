@@ -1,0 +1,26 @@
+# YouTube extraction and media processing
+yt-dlp>=2024.12.0
+imageio-ffmpeg>=0.5.1
+PyYAML>=6.0.1
+requests>=2.31.0
+
+# Transcription (CPU INT8 optimized)
+faster-whisper>=1.0.0
+
+# Free TTS commentary
+edge-tts>=6.1.12
+
+# AI metadata & hooks (Gemini Free Tier)
+google-genai>=0.1.1
+
+# YouTube Data API v3 (OAuth upload)
+google-api-python-client>=2.120.0
+google-auth-oauthlib>=1.2.0
+google-auth-httplib2>=0.2.0
+
+# Telegram Bot (human approval flow)
+python-telegram-bot>=21.0
+
+# Lightweight computer vision for sample-based facecam detection
+opencv-python-headless>=4.9.0.80
+numpy>=1.26.0
